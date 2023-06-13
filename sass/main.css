@@ -1,0 +1,288 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+figure.accueilFigure {
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  position: relative;
+  top: -130px;
+  left: 0;
+  overflow: hidden;
+  margin-bottom: -180px;
+}
+figure.accueilFigure .imageContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  justify-content: center;
+}
+figure.accueilFigure .imageContainer img {
+  position: absolute;
+  transform: translate(-50%, -15%);
+  height: 150vh;
+  left: 50%;
+  top: 0;
+  transition: 0.2s;
+}
+figure.accueilFigure .imageContainer video {
+  position: absolute;
+  transform: translate(-50%, 0%);
+  height: 130vh;
+  left: 50%;
+  top: 0;
+  transition: 0.2s;
+}
+figure.accueilFigure .imageContainer .evenement {
+  padding: 10px;
+  margin-left: -10px;
+  position: absolute;
+  bottom: 10%;
+  left: 15%;
+  color: black;
+  transition: 0.2s;
+}
+figure.accueilFigure .imageContainer .evenement a {
+  text-decoration: none;
+  color: black;
+}
+figure.accueilFigure .imageContainer .evenement:hover {
+  background-color: rgba(255, 255, 255, 0.552);
+  border-radius: 10px;
+}
+
+figure.expoFigure {
+  width: 100vw;
+  height: 70vh;
+  z-index: 0;
+  position: relative;
+  top: -130px;
+  left: 0;
+  overflow: hidden;
+}
+figure.expoFigure .imageContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+figure.expoFigure .imageContainer img {
+  position: absolute;
+  transform: translate(0, -15%);
+  width: 100vw;
+  top: 0;
+  transition: 0.2s;
+}
+figure.expoFigure .imageContainer .evenement {
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+}
+figure.expoFigure .imageContainer .evenement a {
+  text-decoration: none;
+  color: black;
+}
+
+/* header */
+header {
+  position: relative;
+  padding-top: 30px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  padding: 30px 15%;
+  align-items: center;
+  z-index: 2;
+}
+header a {
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+}
+header a h1 {
+  font-size: 30px;
+}
+header nav {
+  gap: 30px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+footer {
+  line-height: 25px;
+  margin-top: 50px;
+  color: white;
+  background-color: #252525;
+  padding: 25px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-between;
+  padding: 30px 15%;
+  position: relative;
+}
+footer .footerLeft {
+  text-align: left;
+}
+footer .footerCenter {
+  text-align: center;
+}
+footer .footerRight {
+  display: flex;
+  flex-flow: column;
+  text-align: right;
+}
+footer .footerRight a {
+  color: white;
+}
+
+/* Médiation */
+.carouselMédiation {
+  margin: auto;
+  width: 80%;
+}
+
+.carousel1 {
+  margin: auto;
+  overflow: auto;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.carouselMédiation img {
+  margin: 50px;
+  width: 250px;
+  border-radius: 10px;
+}
+
+main {
+  display: flex;
+  flex-flow: column;
+  gap: 50px;
+  padding: 30px 15%;
+}
+main section p {
+  text-align: left;
+  font-size: 17px;
+  line-height: 25px;
+}
+main section .extrait {
+  padding-top: 20px;
+}
+main section .textComplet {
+  display: none;
+}
+main section .lirePlus {
+  cursor: pointer;
+  padding: 10px;
+  margin-left: -10px;
+  text-decoration: underline;
+  transition: 0.2s;
+}
+main section .lirePlus:hover {
+  text-decoration: none;
+  color: white;
+  background-color: #252525;
+}
+
+.carouselExpo {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 20px;
+  overflow-x: auto;
+}
+
+.carouselExpo::-webkit-scrollbar {
+  display: none;
+}
+
+.image-popup {
+  position: relative;
+  display: inline-block;
+}
+.image-popup img {
+  cursor: pointer;
+  height: 400px;
+}
+.image-popup .image.active {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  width: auto;
+  height: auto;
+  max-width: 80vw;
+  max-height: 80vh;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+  display: none;
+}
+
+.overlay.active {
+  display: block;
+}
+
+body .gridArchives {
+  padding: 20px;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, 350px);
+  gap: 100px;
+}
+body .gridArchives .expoCard {
+  width: 400px;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  transition: 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .gridArchives .expoCard img {
+  height: 300px;
+  transition: 0.2s;
+}
+body .gridArchives .expoCard p {
+  position: absolute;
+  bottom: 15%;
+  left: 10%;
+  color: white;
+  font-size: 20px;
+  transition: 0.2s;
+  transform: translate(0%, -50%);
+}
+body .gridArchives .expoCard:hover img {
+  height: 310px;
+  filter: blur(7px) brightness(0.8);
+}
+body .gridArchives .expoCard:hover p {
+  bottom: 30%;
+}/*# sourceMappingURL=main.css.map */

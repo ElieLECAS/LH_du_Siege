@@ -1,0 +1,111 @@
+main {
+    // text-align: center;
+    // justify-content: center;
+    // align-items: center;
+    display: flex;
+    flex-flow: column;
+    gap: 50px;
+    padding: 30px 15%;
+
+    section {
+        // width: 80%;
+
+        p {
+
+            text-align: left;
+            font-size: 17px;
+            line-height: 25px;
+        }
+
+        .extrait {
+            padding-top: 20px;
+        }
+
+        .textComplet {
+            display: none;
+        }
+
+        .lirePlus {
+            cursor: pointer;
+            padding: 10px;
+            margin-left: -10px;
+            text-decoration: underline;
+            transition: .2s;
+        }
+
+        .lirePlus:hover {
+            text-decoration: none;
+            color: white;
+            background-color: #252525;
+        }
+
+
+    }
+}
+
+// Vue d'exposition
+// .vueExpoCard {
+//     display: grid;
+//     grid-template-columns: repeat(2, 400px);
+//     // flex-flow: row wrap;
+//     justify-content: center;
+//     gap: 50px;
+
+//     a {
+//         width: 400px;
+
+//         .vueExpoImg {
+//             width: 100%;
+//         }
+//     }
+// }
+
+// test pop up
+.carouselExpo {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 20px;
+    overflow-x: auto;
+}
+
+.carouselExpo::-webkit-scrollbar {
+    display: none;
+}
+
+.image-popup {
+    position: relative;
+    display: inline-block;
+
+    img {
+        cursor: pointer;
+        height: 400px;
+    }
+
+    .image.active {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1000;
+        width: auto;
+        height: auto;
+        max-width: 80vw;
+        max-height: 80vh;
+
+    }
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+    display: none;
+}
+
+.overlay.active {
+    display: block;
+}

@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* header */
+
+header {
+    position: relative;
+    padding-top: 30px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 2;
+}
+
+
+h1 {
+    font-size: 30px;
+}
+
+nav {
+    gap: 30px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+/* Image de fond */
+
+figure {
+    width: 100vw;
+    height: 70vh;
+    z-index: 0;
+    position: relative;
+    top: -100px;
+    left: 0;
+    overflow: hidden;
+    /* display: flex;
+    justify-content: center; */
+}
+
+.imageContainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.imageContainer img {
+    position: absolute;
+    transform: translate(0, -15%);
+    width: 100vw;
+    /* height: 100vh; */
+    left: 0;
+    top: 0;
+}
+
+
+
+.evenement {
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+}
+
+
+
+
+
+/* Médiation */
+
+.carouselMédiation {
+    margin: auto;
+    width: 80%;
+}
+
+.carousel1 {
+    margin: auto;
+    overflow: auto;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.carouselMédiation img {
+    margin: 50px;
+    width: 250px;
+    border-radius: 10px;
+}
+
+
+
+/* Footer */
+
+footer {
+    line-height: 25px;
+    margin-top: 50px;
+    color: white;
+    background-color: #252525;
+    padding: 25px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.contactGrid {
+    display: flex;
+    flex-flow: row;
+    gap: 20px;
+}
+
+.contactGrid a {
+    color: white;
+}

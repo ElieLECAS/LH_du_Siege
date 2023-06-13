@@ -1,0 +1,50 @@
+body .gridArchives {
+    padding: 20px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 350px);
+    gap: 100px;
+
+
+    // lien de l'exposition
+
+    .expoCard {
+        width: 400px;
+        height: 300px;
+        overflow: hidden;
+        position: relative;
+        transition: .2s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            height: 300px;
+            transition: .2s;
+        }
+
+        p {
+            position: absolute;
+            bottom: 15%;
+            left: 10%;
+            color: white;
+            font-size: 20px;
+            transition: .2s;
+            transform: translate(0%, -50%);
+        }
+
+    }
+
+    .expoCard:hover {
+        img {
+            height: 310px;
+            filter: blur(7px) brightness(0.8);
+
+        }
+
+        p {
+            bottom: 30%;
+        }
+    }
+}
+

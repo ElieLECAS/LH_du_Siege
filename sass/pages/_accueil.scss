@@ -1,0 +1,19 @@
+/* Médiation */
+
+.carouselMédiation {
+    margin: auto;
+    width: 80%;
+}
+
+.carousel1 {
+    margin: auto;
+    overflow: auto;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.carouselMédiation img {
+    margin: 50px;
+    width: 250px;
+    border-radius: 10px;
+}

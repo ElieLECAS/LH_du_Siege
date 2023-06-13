@@ -1,0 +1,31 @@
+footer {
+    line-height: 25px;
+    margin-top: 50px;
+    color: white;
+    background-color: #252525;
+    padding: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-between;
+    padding: 30px 15%;
+    position: relative;
+
+    .footerLeft {
+        text-align: left;
+    }
+
+    .footerCenter {
+        text-align: center;
+    }
+
+    .footerRight {
+        display: flex;
+        flex-flow: column;
+        text-align: right;
+        // gap: 20px;
+
+        a {
+            color: white;
+        }
+    }
+}
