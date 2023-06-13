@@ -36,14 +36,12 @@ print(f'Température à {city} : {data["current"]["temp_c"]}°C, {tempsCondition
 
 temps_C = float(data['current']['temp_c'])
 
-if temps_C > 30:
+if temps_C >= 30:
     print('Canicule')
-elif temps_C > 25:
+elif temps_C >= 25:
     print('Pensez à prendre une casquette')
 else:
     print('Pas de chaleur')
 
     
 # Apprendre boucle for
-# for temps_C > 28:
-#     print('il fait chaud')
