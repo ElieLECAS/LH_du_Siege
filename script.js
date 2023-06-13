@@ -1,12 +1,3 @@
-const lirePlusButton = document.querySelector('.lirePlus');
-const extrait = document.querySelector('.extrait');
-const textComplet = document.querySelector('.textComplet');
-
-lirePlusButton.addEventListener('click', function () {
-    textComplet.style.display = 'block';
-    lirePlusButton.style.display = 'none';
-});
-
 // Pop Up
 
 const imagePopups = document.querySelectorAll('.image-popup');
@@ -24,4 +15,15 @@ imagePopups.forEach(function (imagePopup) {
         image.classList.remove('active');
         overlay.classList.remove('active');
     });
+});
+
+// lire plus bouton
+
+const lirePlusButton = document.querySelector('.lirePlus');
+const extrait = document.querySelector('.extrait');
+const textComplet = document.querySelector('.textComplet');
+
+lirePlusButton.addEventListener('click', function () {
+    textComplet.style.display = 'block';
+    lirePlusButton.style.display = 'none';
 });

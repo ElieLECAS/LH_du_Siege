@@ -3,7 +3,6 @@ import requests
 API_KEY = 'f779c64747a14dcfb3b82813230906'
 
 
-    
 city = input('Entrez le nom de votre ville : ') 
 
 # OU
