@@ -25,20 +25,3 @@ imagePopups.forEach(function (imagePopup) {
         overlay.classList.remove('active');
     });
 });
-
-// test Météo avec Python
-
-// function runPythonScript() {
-//     fetch('weather.py')
-//         .then(response => response.text())
-//         .then(data => {
-//             const resultsDiv = document.getElementById('results');
-//             resultsDiv.innerText = data;
-//         })
-//         .catch(error => {
-//             console.error('Une erreur s\'est produite:', error);
-//         });
-// }
-
-
-

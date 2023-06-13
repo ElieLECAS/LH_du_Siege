@@ -2,11 +2,13 @@ import requests
 
 API_KEY = 'f779c64747a14dcfb3b82813230906'
 
-# city = input('Entrez le nom de votre ville : ') 
+
+    
+city = input('Entrez le nom de votre ville : ') 
 
 # OU
 
-city = 'Valenciennes'
+# city = 'Valenciennes'
 
 
 url = f'http://api.weatherapi.com/v1/current.json?key={API_KEY}&q={city}&aqi=no'
@@ -28,20 +30,25 @@ elif 'cloud' in condition.lower():
     tempsCondition = ('Le temps est nuageux')
 elif 'overcast' in condition.lower():
     tempsCondition =('Le temps est couvert')
+elif 'rain' in condition.lower():
+    tempsCondition =('Le temps est pluvieux')
 else:
     tempsCondition = ('Le temps n\'est ni ensoleillé ni nuageux')  
     
 
-print(f'Température à {city} : {data["current"]["temp_c"]}°C, {tempsCondition}, dernière mise à jour : {data["current"]["last_updated"]}')
+temperature = float(data['current']['temp_c'])
 
-temps_C = float(data['current']['temp_c'])
 
-if temps_C >= 30:
-    print('Canicule')
-elif temps_C >= 25:
-    print('Pensez à prendre une casquette')
-else:
-    print('Pas de chaleur')
+def conseilChaleur(temperature):
+    if temperature >= 30:
+        return 'Canicule'
+    elif temperature >= 25:
+        return 'Pensez à prendre une casquette'
+    else:
+        return 'Pas de chaleur'
 
-    
-# Apprendre boucle for
+# Utilisation de la fonction
+conseil = conseilChaleur(temperature)
+
+print(f'Température à {city} : {data["current"]["temp_c"]}°C, {tempsCondition}, \n{conseil}, dernière mise à jour : {data["current"]["last_updated"]}')
+
