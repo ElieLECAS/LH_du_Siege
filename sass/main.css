@@ -299,7 +299,7 @@ main section .lirePlus:hover {
 
 @media screen and (max-width: 800px) {
   .vueExpo .carouselExpo .image-popup img {
-    height: 150px;
+    height: 300px;
   }
 }
 body .gridArchives {
