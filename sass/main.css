@@ -38,14 +38,6 @@ figure.accueilFigure .imageContainer img {
   top: 0;
   transition: 0.2s;
 }
-figure.accueilFigure .imageContainer video {
-  position: absolute;
-  transform: translate(-50%, 0%);
-  height: 130vh;
-  left: 50%;
-  top: 0;
-  transition: 0.2s;
-}
 figure.accueilFigure .imageContainer .evenement {
   padding: 10px;
   margin-left: -10px;
@@ -54,14 +46,18 @@ figure.accueilFigure .imageContainer .evenement {
   left: 15%;
   color: black;
   transition: 0.2s;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 10px;
 }
 figure.accueilFigure .imageContainer .evenement a {
   text-decoration: none;
   color: black;
 }
 figure.accueilFigure .imageContainer .evenement:hover {
-  background-color: rgba(255, 255, 255, 0.552);
+  background-color: rgba(255, 255, 255, 0.9);
   border-radius: 10px;
+  gap: 50px;
 }
 
 figure.expoFigure {
@@ -100,16 +96,37 @@ figure.expoFigure .imageContainer .evenement a {
   color: black;
 }
 
+@media screen and (max-width: 800px) {
+  figure.expoFigure {
+    height: 60vh;
+    top: -100px;
+  }
+  figure.expoFigure .imageContainer img {
+    width: auto;
+    height: 50vh;
+    transform: translate(0, 0%);
+  }
+  figure.expoFigure .imageContainer img:hover {
+    width: auto;
+  }
+  main {
+    margin-top: -150px;
+  }
+}
 /* header */
+img.menuBurger {
+  display: none;
+}
+
 header {
   position: relative;
-  padding-top: 30px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   padding: 30px 15%;
   align-items: center;
   z-index: 2;
+  transition: 0.2s;
 }
 header a {
   font-size: 20px;
@@ -127,6 +144,37 @@ header nav {
   align-items: center;
 }
 
+@media screen and (max-width: 800px) {
+  img.menuBurger {
+    display: block;
+    width: 60px;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    z-index: 10;
+  }
+  header {
+    background-color: white;
+    margin-top: -780px;
+    height: 70vh;
+    flex-flow: column nowrap;
+    justify-content: left;
+    gap: 100px;
+  }
+  header h1 {
+    text-align: center;
+  }
+  header nav {
+    flex-flow: column nowrap;
+    gap: 30px;
+  }
+  .mobile-menu {
+    background-color: #ffffff;
+    margin-top: 0px;
+    z-index: 9;
+    height: 50vh;
+  }
+}
 footer {
   line-height: 25px;
   margin-top: 50px;
@@ -220,7 +268,7 @@ main section .lirePlus:hover {
 }
 .image-popup img {
   cursor: pointer;
-  height: 400px;
+  height: 300px;
 }
 .image-popup .image.active {
   position: fixed;
@@ -249,14 +297,21 @@ main section .lirePlus:hover {
   display: block;
 }
 
+@media screen and (max-width: 800px) {
+  .vueExpo .carouselExpo .image-popup img {
+    height: 150px;
+  }
+}
 body .gridArchives {
   padding: 20px;
+}
+body .gridArchives .container2023 {
   display: grid;
   justify-content: center;
   grid-template-columns: repeat(3, 350px);
   gap: 100px;
 }
-body .gridArchives .expoCard {
+body .gridArchives .container2023 .expoCard {
   width: 400px;
   height: 300px;
   overflow: hidden;
@@ -266,11 +321,11 @@ body .gridArchives .expoCard {
   justify-content: center;
   align-items: center;
 }
-body .gridArchives .expoCard img {
+body .gridArchives .container2023 .expoCard img {
   height: 300px;
   transition: 0.2s;
 }
-body .gridArchives .expoCard p {
+body .gridArchives .container2023 .expoCard p {
   position: absolute;
   bottom: 15%;
   left: 10%;
@@ -279,10 +334,25 @@ body .gridArchives .expoCard p {
   transition: 0.2s;
   transform: translate(0%, -50%);
 }
-body .gridArchives .expoCard:hover img {
+body .gridArchives .container2023 .expoCard:hover img {
   height: 310px;
   filter: blur(7px) brightness(0.8);
 }
-body .gridArchives .expoCard:hover p {
+body .gridArchives .container2023 .expoCard:hover p {
   bottom: 30%;
+}
+
+@media screen and (max-width: 800px) {
+  main {
+    margin-top: 0px;
+  }
+  main .gridArchives {
+    display: flex;
+    flex-flow: row nowrap;
+    overflow: auto;
+  }
+  main .gridArchives .container2023 {
+    display: flex;
+    flex-flow: row nowrap;
+  }
 }/*# sourceMappingURL=main.css.map */

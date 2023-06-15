@@ -1,3 +1,6 @@
+# Rien à voir avec le stage, mais c'est un petit exercice Python réalisé pendant 2-3 pauses
+
+
 import requests
 
 API_KEY = 'f779c64747a14dcfb3b82813230906'

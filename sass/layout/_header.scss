@@ -1,14 +1,18 @@
 /* header */
+img.menuBurger {
+    display: none;
+}
 
 header {
     position: relative;
-    padding-top: 30px;
+    // padding-top: 30px;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     padding: 30px 15%;
     align-items: center;
     z-index: 2;
+    transition: .2s;
 
     a {
         font-size: 20px;
@@ -26,5 +30,41 @@ header {
         flex-flow: row nowrap;
         justify-content: space-around;
         align-items: center;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    img.menuBurger {
+        display: block;
+        width: 60px;
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        z-index: 10;
+    }
+
+    header {
+        background-color: white;
+        margin-top: -780px;
+        height: 70vh;
+        flex-flow: column nowrap;
+        justify-content: left;
+        gap: 100px;
+
+        h1 {
+            text-align: center;
+        }
+
+        nav {
+            flex-flow: column nowrap;
+            gap: 30px;
+        }
+    }
+
+    .mobile-menu {
+        background-color: #ffffff;
+        margin-top: 0px;
+        z-index: 9;
+        height: 50vh;
     }
 }

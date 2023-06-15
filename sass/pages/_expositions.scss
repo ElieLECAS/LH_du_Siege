@@ -43,24 +43,9 @@ main {
     }
 }
 
-// Vue d'exposition
-// .vueExpoCard {
-//     display: grid;
-//     grid-template-columns: repeat(2, 400px);
-//     // flex-flow: row wrap;
-//     justify-content: center;
-//     gap: 50px;
 
-//     a {
-//         width: 400px;
 
-//         .vueExpoImg {
-//             width: 100%;
-//         }
-//     }
-// }
-
-// test pop up
+// Pop up
 .carouselExpo {
     display: flex;
     flex-flow: row nowrap;
@@ -78,7 +63,7 @@ main {
 
     img {
         cursor: pointer;
-        height: 400px;
+        height: 300px;
     }
 
     .image.active {
@@ -108,4 +93,17 @@ main {
 
 .overlay.active {
     display: block;
+}
+
+
+@media screen and (max-width: 800px) {
+    .vueExpo {
+        .carouselExpo {
+            .image-popup {
+                img {
+                    height: 150px;
+                }
+            }
+        }
+    }
 }

@@ -1,3 +1,11 @@
+// menu burger
+const menuBurger = document.querySelector(".menuBurger")
+const header = document.querySelector(".header")
+
+menuBurger.addEventListener('click', () => {
+    header.classList.toggle('mobile-menu')
+})
+
 // Pop Up
 
 const imagePopups = document.querySelectorAll('.image-popup');
@@ -27,3 +35,5 @@ lirePlusButton.addEventListener('click', function () {
     textComplet.style.display = 'block';
     lirePlusButton.style.display = 'none';
 });
+
+
