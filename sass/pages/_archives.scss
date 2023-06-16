@@ -1,18 +1,19 @@
-body .gridArchives {
-    padding: 20px;
-   
+.gridArchives {
+    // padding: 20px;
+
 
 
     // lien de l'exposition
-    .container2023 {
+    .containerAnnee {
         display: grid;
-        justify-content: center;
-        grid-template-columns: repeat(3, 350px);
-        gap: 100px;
+        justify-content: space-between;
+        align-items: center;
+        grid-template-columns: repeat(3, 300px);
+        row-gap: 50px;
 
         .expoCard {
-            width: 400px;
-            height: 300px;
+            width: 300px;
+            height: 200px;
             overflow: hidden;
             position: relative;
             transition: .2s;
@@ -51,6 +52,19 @@ body .gridArchives {
     }
 }
 
+@media screen and (max-width: 1350px) {
+    main {
+
+        .gridArchives {
+
+            .containerAnnee {
+
+                grid-template-columns: repeat(2, 400px);
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 800px) {
 
     main {
@@ -61,9 +75,10 @@ body .gridArchives {
             flex-flow: row nowrap;
             overflow: auto;
 
-            .container2023 {
+            .containerAnnee {
                 display: flex;
                 flex-flow: row nowrap;
+                gap: 30px;
             }
         }
     }
