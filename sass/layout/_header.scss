@@ -46,20 +46,21 @@ header {
 
     }
 
-    nav:hover {
-        gap: 33px;
 
-
-    }
 
 }
 
 header:hover {
 
     background-color: rgba(255, 255, 255, 0.69);
+
     h1 {
         border-radius: 10px;
         // background-color: rgba(255, 255, 255, 0.66);
+    }
+
+    nav {
+        gap: 33px;
     }
 
 }

@@ -17,29 +17,31 @@ main {
             line-height: 25px;
         }
 
-        .extrait {
-            padding-top: 20px;
-        }
-
-        .textComplet {
-            display: none;
-        }
-
-        .lirePlus {
-            cursor: pointer;
-            padding: 10px;
-            margin-left: -10px;
-            text-decoration: underline;
-            transition: .2s;
-        }
-
-        .lirePlus:hover {
-            text-decoration: none;
-            color: white;
-            background-color: #252525;
-        }
 
 
+
+    }
+
+    .extrait {
+        padding-top: 20px;
+    }
+
+    .textComplet {
+        display: none;
+    }
+
+    .lirePlus {
+        cursor: pointer;
+        padding: 10px;
+        margin-left: -10px;
+        text-decoration: underline;
+        transition: .2s;
+    }
+
+    .lirePlus:hover {
+        text-decoration: none;
+        color: white;
+        background-color: #252525;
     }
 }
 

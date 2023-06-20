@@ -6,7 +6,21 @@ menuBurger.addEventListener('click', () => {
     header.classList.toggle('mobile-menu')
 })
 
-// Pop Up
+// Archives : années
+const titleh2 = document.querySelectorAll('h2');
+
+titleh2.forEach(function (titleh2) {
+    const gridArchives = titleh2.nextElementSibling;
+    titleh2.addEventListener('click', function () {
+        gridArchives.classList.toggle('hidden');
+        titleh2.classList.toggle('rotateSpan')
+    });
+});
+
+
+
+
+// Pop Up dans les Expositions
 
 const imagePopups = document.querySelectorAll('.image-popup');
 const overlay = document.querySelector('.overlay');
@@ -25,7 +39,10 @@ imagePopups.forEach(function (imagePopup) {
     });
 });
 
-// lire plus bouton
+
+
+
+// lire plus bouton dans les Expositions
 
 const lirePlusButton = document.querySelector('.lirePlus');
 const extrait = document.querySelector('.extrait');
@@ -35,5 +52,4 @@ lirePlusButton.addEventListener('click', function () {
     textComplet.style.display = 'block';
     lirePlusButton.style.display = 'none';
 });
-
 
