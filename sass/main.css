@@ -9,20 +9,25 @@ body {
 }
 
 h2 {
+  margin-bottom: 15px;
+}
+
+.archivesAnnee {
+  margin-bottom: 0;
   cursor: pointer;
   padding: 10px;
   margin-left: -10px;
   text-decoration: underline;
   transition: 0.2s;
 }
-h2 span {
+.archivesAnnee span {
   display: inline-block;
   text-decoration: none;
   transform: rotate(90deg);
   transition: 1s;
 }
 
-h2:hover {
+.archivesAnnee:hover {
   text-decoration: none;
   color: white;
   background-color: #252525;
@@ -175,7 +180,7 @@ header nav {
 }
 
 header:hover {
-  background-color: rgba(255, 255, 255, 0.69);
+  background-color: rgb(255, 255, 255);
 }
 header:hover h1 {
   border-radius: 10px;
