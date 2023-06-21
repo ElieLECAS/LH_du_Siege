@@ -24,7 +24,7 @@ h2 {
   display: inline-block;
   text-decoration: none;
   transform: rotate(90deg);
-  transition: 1s;
+  transition: 0.5s;
 }
 
 .archivesAnnee:hover {
@@ -370,6 +370,11 @@ main {
   transition: 0.2s;
 }
 
+.rotateSpan {
+  text-decoration: none;
+  color: white;
+  background-color: #252525;
+}
 .rotateSpan span {
   transform: rotate(180deg);
 }
@@ -407,10 +412,15 @@ main {
   transition: 0.5s;
   transform: translate(0%, -50%);
 }
-.gridArchives .containerAnnee .expoCard .aDevoiler {
+.gridArchives .containerAnnee .expoCard .aDevoilerTitre {
+  font-size: 15px;
+  font-style: italic;
+  bottom: -20%;
+}
+.gridArchives .containerAnnee .expoCard .aDevoilerDate {
   font-size: 15px;
   transition: 0.5s;
-  bottom: -20%;
+  bottom: -70%;
 }
 .gridArchives .containerAnnee .expoCard:hover img {
   height: 310px;
@@ -419,9 +429,11 @@ main {
 .gridArchives .containerAnnee .expoCard:hover p {
   bottom: 30%;
 }
-.gridArchives .containerAnnee .expoCard:hover .aDevoiler {
-  display: block;
+.gridArchives .containerAnnee .expoCard:hover .aDevoilerTitre {
   bottom: 20%;
+}
+.gridArchives .containerAnnee .expoCard:hover .aDevoilerDate {
+  bottom: 5%;
 }
 
 @media screen and (max-width: 1250px) {

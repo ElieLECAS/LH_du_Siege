@@ -6,7 +6,9 @@ menuBurger.addEventListener('click', () => {
     header.classList.toggle('mobile-menu')
 })
 
-// Archives : années
+
+
+// Archives : Menu déroulant des expositions (par année)
 const titleh2 = document.querySelectorAll('h2');
 
 titleh2.forEach(function (titleh2) {

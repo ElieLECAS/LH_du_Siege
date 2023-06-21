@@ -9,6 +9,10 @@ main {
 }
 
 .rotateSpan {
+    text-decoration: none;
+    color: white;
+    background-color: #252525;
+
     span {
         transform: rotate(180deg);
     }
@@ -53,10 +57,16 @@ main {
                 transform: translate(0%, -50%);
             }
 
-            .aDevoiler {
+            .aDevoilerTitre {
+                font-size: 15px;
+                font-style: italic;
+                bottom: -20%;
+            }
+
+            .aDevoilerDate {
                 font-size: 15px;
                 transition: .5s;
-                bottom: -20%;
+                bottom: -70%;
             }
 
 
@@ -73,9 +83,12 @@ main {
                 bottom: 30%;
             }
 
-            .aDevoiler {
-                display: block;
+            .aDevoilerTitre {
                 bottom: 20%;
+            }
+
+            .aDevoilerDate {
+                bottom: 5%;
             }
         }
     }

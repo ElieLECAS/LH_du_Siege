@@ -7,7 +7,9 @@ body {
     overflow-x: hidden;
 }
 
-h2{margin-bottom: 15px;}
+h2 {
+    margin-bottom: 15px;
+}
 
 .archivesAnnee {
     margin-bottom: 0;
@@ -21,7 +23,7 @@ h2{margin-bottom: 15px;}
         display: inline-block;
         text-decoration: none;
         transform: rotate(90deg);
-        transition: 1s;
+        transition: .5s;
     }
 }
 
