@@ -20,21 +20,22 @@ main {
 
 .gridArchives {
     transition: .2s;
+    width: 100%;
 
     // lien de l'exposition
     .containerAnnee {
-        display: grid;
-        grid-template-columns: repeat(3, 350px);
-        // display: flex;
-        // flex-flow: row wrap;
-        justify-content: center;
+        // display: grid;
+        // grid-template-columns: repeat(3, 350px);
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: left;
         align-items: center;
 
-        gap: 30px;
+        gap: 1vw;
 
         .expoCard {
-            width: 350px;
-            height: 250px;
+            width: 22vw;
+            height: 15vw;
             overflow: hidden;
             position: relative;
             transition: .2s;
@@ -43,7 +44,7 @@ main {
             align-items: center;
 
             img {
-                height: 300px;
+                height: 105%;
                 transition: .2s;
             }
 
@@ -58,6 +59,7 @@ main {
             }
 
             .aDevoilerTitre {
+                transform: translate(0%, 50%);
                 font-size: 15px;
                 font-style: italic;
                 bottom: -20%;
@@ -74,7 +76,7 @@ main {
 
         .expoCard:hover {
             img {
-                height: 310px;
+                height: 115%;
                 filter: blur(7px) brightness(0.8);
 
             }
@@ -84,7 +86,7 @@ main {
             }
 
             .aDevoilerTitre {
-                bottom: 20%;
+                bottom: 25%;
             }
 
             .aDevoilerDate {
@@ -94,13 +96,30 @@ main {
     }
 }
 
+
+
 @media screen and (max-width: 1250px) {
     main {
 
         .gridArchives {
 
             .containerAnnee {
-                grid-template-columns: repeat(2, 350px);
+                .expoCard {
+                    width: 33vw;
+                    height: 22.5vw;
+
+                    p {
+                        font-size: 17px;
+
+                    }
+
+                    .aDevoilerTitre,
+                    .aDevoilerDate {
+
+                        font-size: 13px;
+
+                    }
+                }
             }
         }
     }
@@ -120,7 +139,17 @@ main {
                 display: flex;
                 flex-flow: row nowrap;
                 gap: 30px;
+
+                .expoCard {
+                    width: 290px;
+                    height: 200px;
+                }
+
             }
+        }
+
+        .gridArchives::-webkit-scrollbar {
+            display: none;
         }
     }
 }

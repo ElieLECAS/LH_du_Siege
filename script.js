@@ -1,4 +1,5 @@
 // menu burger
+
 const menuBurger = document.querySelector(".menuBurger")
 const header = document.querySelector(".header")
 
@@ -9,6 +10,7 @@ menuBurger.addEventListener('click', () => {
 
 
 // Archives : Menu déroulant des expositions (par année)
+
 const titleh2 = document.querySelectorAll('h2');
 
 titleh2.forEach(function (titleh2) {
@@ -54,4 +56,3 @@ lirePlusButton.addEventListener('click', function () {
     textComplet.style.display = 'block';
     lirePlusButton.style.display = 'none';
 });
-
