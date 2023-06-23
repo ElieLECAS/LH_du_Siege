@@ -39,6 +39,11 @@ h4 {
   font-weight: 300;
 }
 
+h5 {
+  font-size: 20px;
+  font-weight: 300;
+}
+
 figure.accueilFigure {
   width: 100vw;
   height: 105vh;
@@ -296,6 +301,10 @@ main .extrait {
 main .textComplet {
   display: none;
 }
+main .textComplet .contexte {
+  font-size: 13px;
+  font-style: italic;
+}
 main .lirePlus {
   cursor: pointer;
   padding: 10px;
@@ -356,6 +365,9 @@ main .lirePlus:hover {
 }
 
 @media screen and (max-width: 800px) {
+  main section p {
+    text-align: justify;
+  }
   .vueExpo .carouselExpo .image-popup img {
     height: 300px;
   }

@@ -28,6 +28,11 @@ main {
 
     .textComplet {
         display: none;
+
+        .contexte {
+            font-size: 13px;
+            font-style: italic;
+        }
     }
 
     .lirePlus {
@@ -99,6 +104,14 @@ main {
 
 
 @media screen and (max-width: 800px) {
+    main {
+        section {
+            p {
+                text-align: justify;
+            }
+        }
+    }
+
     .vueExpo {
         .carouselExpo {
             .image-popup {
