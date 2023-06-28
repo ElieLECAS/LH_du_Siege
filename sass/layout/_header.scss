@@ -82,7 +82,7 @@ header:hover {
 
 
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
     img.menuBurger {
         display: block;
         width: 60px;
@@ -106,9 +106,14 @@ header:hover {
         }
 
         nav {
+            margin-top: 50px;
             font-size: 20px;
             flex-flow: column nowrap;
             gap: 30px;
+
+            a {
+                font-size: 20px;
+            }
         }
     }
 

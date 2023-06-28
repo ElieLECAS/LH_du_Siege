@@ -81,6 +81,8 @@ figure.accueilFigure .imageContainer .evenement {
   display: flex;
   flex-flow: column nowrap;
   gap: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
 }
 figure.accueilFigure .imageContainer .evenement a {
   text-decoration: none;
@@ -113,7 +115,7 @@ figure.expoFigure .imageContainer {
 }
 figure.expoFigure .imageContainer img {
   position: absolute;
-  transform: translate(0, -15%);
+  transform: translate(0, -10%);
   width: 100vw;
   top: 0;
   transition: 0.2s;
@@ -129,20 +131,27 @@ figure.expoFigure .imageContainer .evenement a {
 }
 
 @media screen and (max-width: 800px) {
+  figure.accueilFigure {
+    height: 120vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  figure.accueilFigure .evenement {
+    left: 0;
+    width: 67%;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    gap: 50px;
+  }
   figure.expoFigure {
-    height: 60vh;
+    height: 50vh;
     top: -100px;
   }
   figure.expoFigure .imageContainer img {
-    width: auto;
-    height: 50vh;
+    width: 100%;
+    margin-top: 130px;
     transform: translate(0, 0%);
-  }
-  figure.expoFigure .imageContainer img:hover {
-    width: auto;
-  }
-  main {
-    margin-top: -150px;
   }
 }
 /* header */
@@ -202,7 +211,7 @@ header:hover nav {
     font-size: 20px;
   }
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
   img.menuBurger {
     display: block;
     width: 60px;
@@ -224,9 +233,13 @@ header:hover nav {
     text-align: center;
   }
   header nav {
+    margin-top: 50px;
     font-size: 20px;
     flex-flow: column nowrap;
     gap: 30px;
+  }
+  header nav a {
+    font-size: 20px;
   }
   header:hover nav {
     gap: 30px;
@@ -365,6 +378,9 @@ main .lirePlus:hover {
 }
 
 @media screen and (max-width: 800px) {
+  main {
+    padding-top: 0;
+  }
   main section p {
     text-align: justify;
   }
