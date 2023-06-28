@@ -413,7 +413,7 @@ main {
   align-items: center;
 }
 .gridArchives .containerAnnee .expoCard img {
-  height: 105%;
+  height: 110%;
   transition: 0.2s;
 }
 .gridArchives .containerAnnee .expoCard p {
@@ -437,7 +437,7 @@ main {
   bottom: -70%;
 }
 .gridArchives .containerAnnee .expoCard:hover img {
-  height: 115%;
+  height: 120%;
   filter: blur(7px) brightness(0.8);
 }
 .gridArchives .containerAnnee .expoCard:hover p {
