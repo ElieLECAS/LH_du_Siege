@@ -22,6 +22,23 @@ titleh2.forEach(function (titleh2) {
 });
 
 
+// Bouton qui permet de tout basculer (Afficher/Masquer) dans la page Archives
+
+const BoutonToutBasculer = document.querySelector('.BasculerTout');
+const gridArchives = document.querySelectorAll('.gridArchives');
+const titleh = document.querySelectorAll('h2');
+
+BoutonToutBasculer.addEventListener('click', function () {
+    const isActive = BoutonToutBasculer.classList.toggle('active');
+
+    gridArchives.forEach(function (element) {
+        element.classList.toggle('hidden', !isActive);
+    });
+
+    titleh2.forEach(function (element) {
+        element.classList.toggle('rotateSpan', isActive);
+    });
+});
 
 
 // Pop Up dans les Expositions

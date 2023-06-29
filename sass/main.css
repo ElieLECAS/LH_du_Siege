@@ -392,6 +392,22 @@ main {
   padding-top: 100px;
   padding: 30px 15% 10px;
 }
+main .firstLine {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .firstLine .BasculerTout {
+  color: black;
+  background-color: none;
+  transition: 0.2s;
+  padding: 10px;
+}
+main .firstLine .BasculerTout:hover {
+  color: white;
+  background-color: black;
+  cursor: pointer;
+}
 
 .hidden {
   display: none;

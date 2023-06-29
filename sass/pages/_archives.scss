@@ -1,6 +1,25 @@
 main {
     padding-top: 100px;
     padding: 30px 15% 10px;
+
+    .firstLine {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .BasculerTout {
+            color: black;
+            background-color: none; 
+            transition: .2s;
+            padding: 10px;
+        }
+
+        .BasculerTout:hover {
+            color: white;
+            background-color: black;
+            cursor: pointer;
+        }
+    }
 }
 
 .hidden {
